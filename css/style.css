@@ -10,6 +10,10 @@ html {
     font-size: 10px;
 }
 
+body {
+    background-color: hsl(0, 0%, 95%);
+}
+
 /* CAR COMPONENT */
 
 .car-component {
@@ -24,9 +28,7 @@ html {
     width: 60%;
     height: 60%;
     display: flex;
-    flex-shrink: 1;
     background-color: beige;
-    border-radius: 15px;
 }
 
 /* CAR INFO SECTION */
@@ -43,18 +45,89 @@ html {
 }
 
 .car-info h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    font-family: 'Big Shoulders Display', cursive;
     text-transform: uppercase;
+    color: hsl(0, 0%, 95%);
 }
 
 .car-info p,
 .car-info button {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.5;
+    color: hsl(0, 0%, 100%, 0.75);
 }
 
 .car-info button {
     width: 70%;
-    height: 5rem;
+    height: 4rem;
     border-radius: 50px;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    background-color: hsl(0, 0%, 95%);
+    border: none;
+}
+
+/* SEDAN SECTION */
+
+.sedan {
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.sedan button {
+    color: hsl(31, 77%, 52%);
+}
+
+.sedan button:active {
+    background-color: hsl(31, 77%, 52%);
+    color: hsl(0, 0%, 95%);
+    border: 2px solid hsl(0, 0%, 95%);
+}
+
+/* SUV SECTION*/
+
+.suv {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.suv button {
+    color: hsl(184, 100%, 22%);
+}
+
+.suv button:active {
+    background-color: hsl(184, 100%, 22%);
+    color: hsl(0, 0%, 95%);
+    border: 2px solid hsl(0, 0%, 95%);
+}
+
+/* LUXURY SECTION */
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.luxury button {
+    color: hsl(179, 100%, 13%);
+}
+
+.luxury button:active {
+    background-color: hsl(179, 100%, 13%);
+    color: hsl(0, 0%, 95%);
+    border: 2px solid hsl(0, 0%, 95%);
+}
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1051px) {
+    html {
+        font-size: 8;
+    }
+
+    .card {
+        width: 80%;
+    }
 }
