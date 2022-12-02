@@ -1,0 +1,60 @@
+/* GLOBALS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+/* CAR COMPONENT */
+
+.car-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.card {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    flex-shrink: 1;
+    background-color: beige;
+    border-radius: 15px;
+}
+
+/* CAR INFO SECTION */
+
+.car-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 4rem;
+}
+
+.car-info img {
+    width: 30%;
+}
+
+.car-info h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.car-info p,
+.car-info button {
+    font-size: 1.8rem;
+}
+
+.car-info button {
+    width: 70%;
+    height: 5rem;
+    border-radius: 50px;
+    margin-top: 2rem;
+}
