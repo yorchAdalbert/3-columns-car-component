@@ -28,27 +28,26 @@ body {
     width: 60%;
     height: 60%;
     display: flex;
-    background-color: beige;
 }
 
 /* CAR INFO SECTION */
 
 .car-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 4rem;
+    padding: 4%;
 }
 
 .car-info img {
     width: 30%;
+    margin-top: 8%;
+    margin-bottom: 15%;
 }
 
 .car-info h1 {
-    font-size: 3.5rem;
+    font-size: 3.7rem;
     font-family: 'Big Shoulders Display', cursive;
     text-transform: uppercase;
     color: hsl(0, 0%, 95%);
+    margin-bottom: 15%;
 }
 
 .car-info p,
@@ -59,11 +58,14 @@ body {
     color: hsl(0, 0%, 100%, 0.75);
 }
 
+.car-info p {
+    margin-bottom: 30%;
+}
+
 .car-info button {
     width: 70%;
-    height: 4rem;
+    height: 4.5rem;
     border-radius: 50px;
-    margin-top: 3rem;
     background-color: hsl(0, 0%, 95%);
     border: none;
 }
@@ -122,12 +124,81 @@ body {
 
 /* RESPONSIVE */
 
-@media only screen and (max-width: 1051px) {
+@media only screen and (max-width: 1300px) {
+    html {
+        font-size: 9;
+    }
+
+    .card {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 947px) {
     html {
         font-size: 8;
     }
 
     .card {
         width: 80%;
+    }
+}
+
+@media only screen and (max-width: 643px) {
+    html {
+        font-size: 9px;
+    }
+
+    .car-component {
+        align-items: flex-start;
+        margin: 4rem 0;
+    }
+
+    .card {
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .sedan {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 15px;
+    }
+
+    .luxury {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 15px;
+    }
+
+    .car-info {
+        padding: 5rem;
+    }
+
+}
+
+@media only screen and (max-width: 421px) {
+    .card {
+        width: 80%;
+    }
+
+    .car-info p {
+        margin-bottom: 10%;
+    }
+
+    .car-info img {
+        margin: 0 0 10% 0;
+    }
+
+    .car-info h1 {
+        margin-bottom: 10%;
+    }
+}
+
+@media only screen and (max-width: 270px) {
+    html {
+        font-size: 7px;
+    }
+
+    .card {
+        width: 90%;
     }
 }
