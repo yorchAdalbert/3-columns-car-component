@@ -6,67 +6,72 @@
     box-sizing: border-box;
 }
 
-html {
-    font-size: 10px;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+    font-size: 0.9375rem;
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.6;
 }
 
-body {
-    background-color: hsl(0, 0%, 95%);
+a {
+    text-decoration: none;
+    text-align: center;
+    line-height: 2.5;
 }
 
 /* CAR COMPONENT */
 
-.car-component {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-}
-
 .card {
-    width: 60%;
     display: flex;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+    max-width: 57.5rem;
+    overflow: hidden;
+    margin: 1.5rem;
 }
 
 /* CAR INFO SECTION */
 
 .car-info {
-    padding: 4%;
+    flex-grow: 1;
+    flex-basis: calc((46.5625rem - 100%) * 999);
+    padding: clamp(2rem, 6%, 3rem);
 }
 
-.car-info img {
-    width: 30%;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-}
+.car-info img {}
 
-.car-info h1 {
-    font-size: 3.7rem;
+.car-info h2 {
+    font-size: 2.5rem;
     font-family: 'Big Shoulders Display', cursive;
     text-transform: uppercase;
     color: hsl(0, 0%, 95%);
-    margin-bottom: 2rem;
+    margin-top: 2.1875rem;
+    margin-bottom: 1.5625rem;
+    line-height: 1;
 }
 
 .car-info p,
-.car-info button {
-    font-size: 1.5rem;
-    font-family: 'Lexend Deca', sans-serif;
-    line-height: 1.5;
+.button {
     color: hsl(0, 0%, 100%, 0.75);
 }
 
 .car-info p {
-    margin-bottom: 5rem;
+    opacity: .75;
+    width: min(100%, 35ch);
 }
 
-.car-info button {
-    width: 70%;
-    height: 4.5rem;
-    border-radius: 50px;
+.button {
+    display: inline-block;
+    width: 10rem;
+    height: 2.5rem;
+    border-radius: 3em;
     background-color: hsl(0, 0%, 95%);
-    border: none;
+    border: 0.75rem 2rem;
+    margin-top: 5.1875rem;
 }
 
 /* SEDAN SECTION */
@@ -77,11 +82,11 @@ body {
     border-bottom-left-radius: 15px;
 }
 
-.sedan button {
+.sedan .button {
     color: hsl(31, 77%, 52%);
 }
 
-.sedan button:active {
+.sedan .button:active {
     background-color: hsl(31, 77%, 52%);
     color: hsl(0, 0%, 95%);
     border: 2px solid hsl(0, 0%, 95%);
@@ -93,11 +98,11 @@ body {
     background-color: hsl(184, 100%, 22%);
 }
 
-.suv button {
+.suv .button {
     color: hsl(184, 100%, 22%);
 }
 
-.suv button:active {
+.suv .button:active {
     background-color: hsl(184, 100%, 22%);
     color: hsl(0, 0%, 95%);
     border: 2px solid hsl(0, 0%, 95%);
@@ -111,11 +116,11 @@ body {
     border-bottom-right-radius: 15px;
 }
 
-.luxury button {
+.luxury .button {
     color: hsl(179, 100%, 13%);
 }
 
-.luxury button:active {
+.luxury .button:active {
     background-color: hsl(179, 100%, 13%);
     color: hsl(0, 0%, 95%);
     border: 2px solid hsl(0, 0%, 95%);
@@ -123,42 +128,7 @@ body {
 
 /* RESPONSIVE */
 
-@media only screen and (max-width: 1110px) {
-    html {
-        font-size: 9;
-    }
-
-    .card {
-        width: 70%;
-    }
-}
-
-@media only screen and (max-width: 875px) {
-    html {
-        font-size: 8;
-    }
-
-    .card {
-        width: 80%;
-    }
-}
-
-@media only screen and (max-width: 670px) {
-    html {
-        font-size: 9px;
-    }
-
-    .car-component {
-        align-items: flex-start;
-    }
-
-    .card {
-        flex-direction: column;
-        width: 60%;
-        margin-top: 4rem;
-        margin-bottom: 4rem;
-    }
-
+@media only screen and (max-width: 788px) {
     .sedan {
         border-bottom-left-radius: 0;
         border-top-right-radius: 15px;
@@ -167,38 +137,5 @@ body {
     .luxury {
         border-top-right-radius: 0;
         border-bottom-left-radius: 15px;
-    }
-
-    .car-info {
-        padding: 5rem;
-    }
-
-}
-
-@media only screen and (max-width: 500px) {
-    .card {
-        width: 80%;
-    }
-
-    .car-info p {
-        margin-bottom: 10%;
-    }
-
-    .car-info img {
-        margin: 0 0 10% 0;
-    }
-
-    .car-info h1 {
-        margin-bottom: 10%;
-    }
-}
-
-@media only screen and (max-width: 300px) {
-    html {
-        font-size: 7px;
-    }
-
-    .card {
-        width: 90%;
     }
 }
